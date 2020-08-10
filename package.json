@@ -36,5 +36,11 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "name": "javascript-exercise",
+  "description": "安装包依赖",
+  "version": "1.0.0",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
 }
