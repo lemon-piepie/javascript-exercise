@@ -10,8 +10,6 @@ export default function getScoreOutput(person) {
   const score = getScore(person.id);
   const { lastName } = person;
   const { firstName } = person;
-  console.log(score);
-  console.log(lastName);
   const result = `你好，${lastName}${firstName}！你的考试成绩为${score}分`;
   return result;
 }
