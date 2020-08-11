@@ -8,9 +8,9 @@ function fetchData(url) {
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          resolve(xhr);
+          resolve(xhr.responseText);
         } else {
-          reject(xhr);
+          reject(xhr.responseText);
         }
       }
     };
@@ -22,7 +22,7 @@ function fetchData(url) {
 const URL = 'http://localhost:3000/api';
 fetchData(URL)
   .then(result => {
-    console.log(result);
+    console.log(document.writeln(JSON.parse(result).name));
   })
   .catch(error => {
     console.error(error);

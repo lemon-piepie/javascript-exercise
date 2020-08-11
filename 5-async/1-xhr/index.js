@@ -7,9 +7,9 @@ function fetchData(url, successCallback, errorCallback) {
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        successCallback(xhr);
+        successCallback(xhr.responseText);
       } else {
-        errorCallback(xhr);
+        errorCallback(xhr.responseText);
       }
     }
   };
@@ -21,7 +21,7 @@ const URL = 'http://localhost:3000/api';
 fetchData(
   URL,
   result => {
-    console.log(result);
+    console.log(document.writeln(JSON.parse(result).name));
   },
   error => {
     console.error(error);
